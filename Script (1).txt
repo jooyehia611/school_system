@@ -1,0 +1,222 @@
+USE [ZYSMS2022]
+GO
+
+/****** Object:  Table [dbo].[FinTransaction]    Script Date: 5/5/2023 2:44:19 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[FinTransaction](
+	[TransID] [int] NULL,
+	[CreationDate] [datetime] NULL,
+	[TransValue] [int] NULL,
+	[acc_no] [int] NULL
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Categories]    Script Date: 5/5/2023 2:44:19 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Categories](
+	[ID] [int] NULL,
+	[NameAr] [nvarchar](50) NULL,
+	[NameEn] [nvarchar](50) NULL,
+	[IsActive] [int] NULL,
+	[SubOrMainCat] [int] NULL
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[CustBanks]    Script Date: 5/5/2023 2:44:19 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[CustBanks](
+	[ID] [int] NULL,
+	[NameAr] [nvarchar](50) NULL,
+	[NameEn] [nvarchar](50) NULL,
+	[IsActive] [int] NULL
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[CustomerAndVendor]    Script Date: 5/5/2023 2:44:19 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[CustomerAndVendor](
+	[ID] [int] NULL,
+	[NameAr] [nvarchar](50) NULL,
+	[NameEn] [nvarchar](50) NULL,
+	[Type] [int] NULL,
+	[Email] [nvarchar](50) NULL,
+	[Mobile] [nvarchar](50) NULL,
+	[Address] [nvarchar](50) NULL,
+	[IsActive] [int] NULL,
+	[Notes] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[GLACC]    Script Date: 5/5/2023 2:44:19 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[GLACC](
+	[ID] [int] NOT NULL,
+	[AccNo] [nvarchar](max) NOT NULL,
+	[AccName] [nvarchar](max) NOT NULL,
+	[AccNameEn] [nvarchar](max) NULL,
+	[AccType] [nvarchar](max) NOT NULL,
+	[IsParent] [int] NOT NULL,
+	[AccParentNo] [nvarchar](max) NOT NULL,
+	[IsActive] [int] NOT NULL,
+	[IsUsed] [int] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[ItemReasons]    Script Date: 5/5/2023 2:44:19 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ItemReasons](
+	[ID] [int] NULL,
+	[NameAr] [nvarchar](50) NULL,
+	[NameEn] [nvarchar](50) NULL,
+	[IsActive] [int] NULL
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Items]    Script Date: 5/5/2023 2:44:19 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Items](
+	[ID] [int] NULL,
+	[Code] [nvarchar](50) NULL,
+	[NameAr] [nvarchar](50) NULL,
+	[NameEn] [nvarchar](50) NULL,
+	[OriginID] [int] NULL,
+	[CatID] [int] NULL,
+	[IsActive] [int] NULL
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[ItemsOrigins]    Script Date: 5/5/2023 2:44:19 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ItemsOrigins](
+	[ID] [int] NULL,
+	[NameAr] [nvarchar](50) NULL,
+	[NameEn] [nvarchar](50) NULL,
+	[IsActive] [int] NULL
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[PaymentsMethods]    Script Date: 5/5/2023 2:44:19 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[PaymentsMethods](
+	[ID] [int] NULL,
+	[NameAr] [nvarchar](50) NULL,
+	[NameEn] [nvarchar](50) NULL,
+	[IsActive] [int] NULL
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[StockTransactionsDetails]    Script Date: 5/5/2023 2:44:19 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[StockTransactionsDetails](
+	[TransID] [int] NULL,
+	[TransType] [int] NULL,
+	[ItemID] [int] NULL,
+	[ItemUnit] [int] NULL,
+	[Qty] [float] NULL,
+	[ID] [int] NULL,
+	[CV_ID] [int] NULL
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[StockTransActionsHeader]    Script Date: 5/5/2023 2:44:19 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[StockTransActionsHeader](
+	[TransID] [int] NULL,
+	[CreationDate] [datetime] NULL,
+	[TransType] [int] NULL,
+	[TransDescription] [nvarchar](50) NULL,
+	[TransTotalValue] [float] NULL,
+	[CreationBy] [int] NULL,
+	[IsCanceled] [int] NULL,
+	[LastUpdateDate] [datetime] NULL,
+	[UpdatedBy] [int] NULL
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Stores]    Script Date: 5/5/2023 2:44:19 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Stores](
+	[ID] [int] NULL,
+	[NameAr] [nvarchar](50) NULL,
+	[NameEn] [nvarchar](50) NULL,
+	[IsActive] [int] NULL
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Units]    Script Date: 5/5/2023 2:44:19 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Units](
+	[ID] [int] NULL,
+	[MainUnitValue] [int] NULL,
+	[MainUnitName] [nvarchar](50) NULL,
+	[SubUnitValue] [int] NULL,
+	[SubUnitName] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+
+

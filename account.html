@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Sidebar Menu  | CodingLab </title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body dir="rtl">
+
+
+
+
+<!-- navbar -->
+
+
+  <header class="position-relative">
+    <nav dir="rtl" class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #11101D;">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  
+            <li class="nav-item dropdown active">
+              <a class="text-white nav-link dropdown-toggle d-flex justify-content-center align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <h5>محمد الزبيدي</h5>
+                <div class="box">
+                  <img src="img/profile-img-1.jpg" alt="" class="ms-2 me-2" width="40px" style="border-radius: 50%;">
+                </div>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+  
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+<!-- end navbar -->
+
+
+
+
+<!-- sidebar -->
+
+
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">محمد الزبيدي</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+
+    <ul class="nav-list">
+      <!-- <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li> -->
+      <li>
+        <a href="#first">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">الحسابات والارصدة  </span>
+        </a>
+         <span class="tooltip">الحسابات والارصدة  </span>
+      </li>
+      <li>
+       <a href="#second">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">العملاء والموردون</span>
+       </a>
+       <span class="tooltip">العملاء والموردون</span>
+     </li>
+     <li>
+       <a href="#third">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">المستودعات</span>
+       </a>
+       <span class="tooltip">المستودعات</span>
+     </li>
+     <li>
+       <a href="#fourth">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">بلد المنشأ</span>
+       </a>
+       <span class="tooltip">بلد المنشأ</span>
+     </li>
+     <li>
+       <a href="#fifth">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name"> وحدات القياس </span>
+       </a>
+       <span class="tooltip"> وحدات القياس </span>
+     </li>
+     <li>
+       <a href="#sixth">
+         <i class='bx bx-cart-alt' ></i>
+         <span class="links_name">المواد </span>
+       </a>
+       <span class="tooltip">المواد </span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-heart' ></i>
+         <span class="links_name">بنوك العملاء </span>
+       </a>
+       <span class="tooltip">بنوك العملاء </span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">طرق الدفع </span>
+       </a>
+       <span class="tooltip">طرق الدفع </span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">القيد</span>
+       </a>
+       <span class="tooltip">القيد</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">القبض</span>
+       </a>
+       <span class="tooltip">القبض</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">الصرف</span>
+       </a>
+       <span class="tooltip">الصرف</span>
+     </li>
+     <!-- <li class="profile">
+         <div class="profile-details">
+           <img src="profile.jpg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Prem Shahi</div>
+             <div class="job">Web designer</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li> -->
+    </ul>
+  </div>
+
+
+<!-- end sidebar -->
+ <!-- lazem a3ml style l kol tabs gwa el section fe el css -->
+
+
+
+ <!-- الحسابات -->
+  <section class="home-section" id= 'first'>
+   <div class="container">
+
+    <div class="pc-tab" dir="rtl">
+
+      <input checked="checked" id="tab1" type="radio" name="pct" />
+      <input id="tab2" type="radio" name="pct" />
+
+        <nav>
+          <ul dir="rtl">
+            <li class="tab1">
+              <label for="tab1" class="fw-bold">  تعريف الحسابات الرئيسية </label>
+            </li>
+            <li class="tab2">
+              <label for="tab2" class="fw-bold">تعريف الحسابات الفرعية</label>
+            </li>
+          </ul>
+        </nav>
+        <section class="label">
+          <div class="tab1 square">
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >رقم الحساب</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >اسم الحساب</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >Account Number</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >Account Name</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+
+          
+          <div class="tab2 square">
+            <div class="row mb-3">
+              <div class="col-md-12 ">
+                <div class="d-flex align-items-center">
+                  <label for="">اختر الحساب الرئيسي</label>
+                  <select name="" id="" class="w-25 form-select me-4">
+                    <option value="">الحساب الأول</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >رقم الحساب</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >اسم الحساب</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >Account Number</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >Account Name</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+          </div>
+
+        </section>
+
+
+      </div>
+   </div>
+    
+  </section>
+       
+  <!-- العملاء  -->
+  <section class="home-section" id= 'second'>
+    <div class="container">
+
+      <div class="pc-tab" dir="rtl">
+  
+        <input checked="checked" id="person1" type="radio" name="pct" />
+        <input id="person2" type="radio" name="pct" />
+  
+          <nav>
+            <ul dir="rtl">
+              <li class="person1">
+                <label for="person1" class="fw-bold">  تعريف الحسابات الرئيسية </label>
+              </li>
+              <li class="person2">
+                <label for="person2" class="fw-bold">تعريف الحسابات الفرعية</label>
+              </li>
+            </ul>
+          </nav>
+          <section class="label">
+            <div class="person1 square">
+  
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >رقم الحساب</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >اسم الحساب</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+              </div>
+  
+              <div class="row mt-3">
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >Account Number</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >Account Name</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+  
+              </div>
+  
+            </div>
+  
+            
+            <div class="person2 square">
+              <div class="row mb-3">
+                <div class="col-md-12 ">
+                  <div class="d-flex align-items-center">
+                    <label for="">اختر الحساب الرئيسي</label>
+                    <select name="" id="" class="w-25 form-select me-4">
+                      <option value="">الحساب الأول</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >رقم الحساب</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >اسم الحساب</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+              </div>
+  
+              <div class="row mt-3">
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >Account Number</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >Account Name</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+            </div>
+  
+          </section>
+  
+  
+        </div>
+     </div>
+  </section>
+  
+  <!-- المستودعات -->
+  <section class="home-section" id= 'third'>
+
+    <div class="container">
+
+      <div class="pc-tab" dir="rtl">
+  
+        <input checked="checked" id="mstwd1" type="radio" name="pct" />
+        <input id="mstwd2" type="radio" name="pct" />
+  
+          <nav>
+            <ul dir="rtl">
+              <li class="mstwd1">
+                <label for="mstwd1" class="fw-bold">  تعريف الحسابات الرئيسية </label>
+              </li>
+              <li class="mstwd2">
+                <label for="mstwd2" class="fw-bold">تعريف الحسابات الفرعية</label>
+              </li>
+            </ul>
+          </nav>
+          <section class="label">
+            <div class="mstwd1 square">
+  
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >رقم الحساب</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >اسم الحساب</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+              </div>
+  
+              <div class="row mt-3">
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >Account Number</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >Account Name</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+  
+              </div>
+  
+            </div>
+  
+            
+            <div class="mstwd2 square">
+              <div class="row mb-3">
+                <div class="col-md-12 ">
+                  <div class="d-flex align-items-center">
+                    <label for="">اختر الحساب الرئيسي</label>
+                    <select name="" id="" class="w-25 form-select me-4">
+                      <option value="">الحساب الأول</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >رقم الحساب</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >اسم الحساب</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+              </div>
+  
+              <div class="row mt-3">
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >Account Number</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >Account Name</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+            </div>
+  
+          </section>
+  
+  
+        </div>
+     </div>
+        
+  </section>
+
+<!-- بلد المنشأ -->
+  <section class="home-section" id= 'fourth'>
+    <div class="container">
+
+      <div class="pc-tab" dir="rtl">
+  
+        <input checked="checked" id="city1" type="radio" name="pct" />
+        <input id="city2" type="radio" name="pct" />
+  
+          <nav>
+            <ul dir="rtl">
+              <li class="city1">
+                <label for="city1" class="fw-bold">  تعريف الحسابات الرئيسية </label>
+              </li>
+              <li class="city2">
+                <label for="city2" class="fw-bold">تعريف الحسابات الفرعية</label>
+              </li>
+            </ul>
+          </nav>
+          <section class="label">
+            <div class="city1 square">
+  
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >رقم الحساب</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >اسم الحساب</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+              </div>
+  
+              <div class="row mt-3">
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >Account Number</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >Account Name</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+  
+              </div>
+  
+            </div>
+  
+            
+            <div class="city2 square">
+              <div class="row mb-3">
+                <div class="col-md-12 ">
+                  <div class="d-flex align-items-center">
+                    <label for="">اختر الحساب الرئيسي</label>
+                    <select name="" id="" class="w-25 form-select me-4">
+                      <option value="">الحساب الأول</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >رقم الحساب</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >اسم الحساب</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+              </div>
+  
+              <div class="row mt-3">
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >Account Number</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+  
+                <div class="col-md-4">
+                  <div class="d-flex align-items-center">
+                    <label class="" for="" style="width: 50%;"  >Account Name</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+            </div>
+  
+          </section>
+  
+  
+        </div>
+     </div>
+  </section>
+
+<!-- وحدات القياس -->
+<section class="home-section" id= 'fifth'>
+  <div class="container">
+
+    <div class="pc-tab" dir="rtl">
+
+      <input checked="checked" id="wa7da1" type="radio" name="pct" />
+      <input id="wa7da2" type="radio" name="pct" />
+
+        <nav>
+          <ul dir="rtl">
+            <li class="wa7da1">
+              <label for="wa7da1" class="fw-bold">  تعريف الحسابات الرئيسية </label>
+            </li>
+            <li class="wa7da2">
+              <label for="wa7da2" class="fw-bold">تعريف الحسابات الفرعية</label>
+            </li>
+          </ul>
+        </nav>
+        <section class="label">
+          <div class="wa7da1 square">
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >رقم الحساب</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >اسم الحساب</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >Account Number</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >Account Name</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+
+          
+          <div class="wa7da2 square">
+            <div class="row mb-3">
+              <div class="col-md-12 ">
+                <div class="d-flex align-items-center">
+                  <label for="">اختر الحساب الرئيسي</label>
+                  <select name="" id="" class="w-25 form-select me-4">
+                    <option value="">الحساب الأول</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >رقم الحساب</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >اسم الحساب</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >Account Number</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >Account Name</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+          </div>
+
+        </section>
+
+
+      </div>
+   </div>
+</section>
+
+<!-- المواد -->
+<section class="home-section" id= 'sixth'>
+  <div class="container">
+
+    <div class="pc-tab" dir="rtl">
+
+      <input checked="checked" id="mada1" type="radio" name="pct" />
+      <input id="mada2" type="radio" name="pct" />
+
+        <nav>
+          <ul dir="rtl">
+            <li class="mada1">
+              <label for="mada1" class="fw-bold">  تعريف الحسابات الرئيسية </label>
+            </li>
+            <li class="mada2">
+              <label for="mada2" class="fw-bold">تعريف الحسابات الفرعية</label>
+            </li>
+          </ul>
+        </nav>
+        <section class="label">
+          <div class="wa7da1 square">
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >رقم الحساب</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >اسم الحساب</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >Account Number</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >Account Name</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+
+          
+          <div class="wa7da2 square">
+            <div class="row mb-3">
+              <div class="col-md-12 ">
+                <div class="d-flex align-items-center">
+                  <label for="">اختر الحساب الرئيسي</label>
+                  <select name="" id="" class="w-25 form-select me-4">
+                    <option value="">الحساب الأول</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >رقم الحساب</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >اسم الحساب</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >Account Number</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <label class="" for="" style="width: 50%;"  >Account Name</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+          </div>
+
+        </section>
+
+
+      </div>
+   </div>
+</section>
+
+
+
+
+  <script src="js/all.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

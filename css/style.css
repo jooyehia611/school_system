@@ -1,0 +1,574 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+.sidebar{
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #11101D;
+  padding: 6px 14px;
+  z-index: 999;
+  transition: all 0.5s ease;
+}
+.sidebar.open{
+  width: 250px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+  margin-right: 20px;
+}
+.sidebar .logo-details .logo_name{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+.sidebar input{
+  font-size: 15px;
+  color: #FFF;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #1d1b31;
+}
+.sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+.sidebar .bx-search{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar.open .bx-search:hover{
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar .bx-search:hover{
+  background: #FFF;
+  color: #11101d;
+}
+.sidebar li a{
+  display: flex;
+  height: 100% !important;
+  width: 100% !important;
+  border-radius: 12px !important;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  /* background: #11101D; */
+}
+.sidebar li a:hover{
+  background: #FFF !important;
+  padding-left: 50px;
+}
+.sidebar li a .links_name{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #11101D;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.open li.profile{
+  width: 250px;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+.sidebar .profile #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #1d1b31;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar.open .profile #log_out{
+  width: 50px;
+  background: none;
+}
+/* .home-section{
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 0;
+  opacity: 0;
+  transition: all ease .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all;
+} */
+
+.home-section {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transition: all 0s;
+}
+
+.sidebar.open ~ .home-section{
+  /* left: -250px; */
+  width: calc(100% - 250px);
+}
+
+.sidebar.open ~ header{
+  left: -250px;
+  width: calc(100% - 250px);
+}
+.home-section .text{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+
+
+.navbar{
+  position: absolute;
+  right: 60px;
+  left: 0;
+  z-index: 99;
+}
+
+
+.pc-tab > input,
+.pc-tab section > div {
+  display: none;
+}
+
+/* el tabs */
+
+#tab1:checked ~ section .tab1,
+#tab2:checked ~ section .tab2,
+#tab3:checked ~ section .tab3,
+#tab4:checked ~ section .tab4,
+#tab5:checked ~ section .tab5 {
+  display: block;
+}
+
+#person1:checked ~ section .person1,
+#person2:checked ~ section .person2 {
+  display: block;
+}
+
+#mstwd1:checked ~ section .mstwd1,
+#mstwd2:checked ~ section .mstwd2{
+  display: block;
+}
+
+#city1:checked ~ section .city1,
+#city2:checked ~ section .city2
+{
+  display: block;
+}
+
+#wa7da1:checked ~ section .wa7da1,
+#wa7da2:checked ~ section .wa7da2{
+  display: block;
+}
+
+
+
+
+#tab1:checked ~ nav .tab1,
+#tab2:checked ~ nav .tab2,
+#tab3:checked ~ nav .tab3,
+#tab4:checked ~ nav .tab4,
+#tab5:checked ~ nav .tab5 {
+  color: red;
+}
+#person1:checked ~ nav .person1,
+#person2:checked ~ nav .person2{
+  color: red;
+}
+#mstwd1:checked ~ nav .mstwd1,
+#mstwd2:checked ~ nav .mstwd2{
+  color: red;
+}
+#city1:checked ~ nav .city1,
+#city2:checked ~ nav .city2{
+  color: red;
+}
+#wa7da1:checked ~ nav .wa7da1,
+#wa7da2:checked ~ nav .wa7da2{
+  color: red;
+}
+
+
+.pc-tab {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.pc-tab ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pc-tab ul li label {
+  font-family: "Raleway";
+  float: right;
+  padding: 15px 25px;
+  border: 1px solid #ddd;
+  border-bottom: 0;
+  background: #eeeeee;
+  color: #444;
+}
+.pc-tab ul li label:hover {
+  background: #dddddd;
+}
+.pc-tab ul li label:active {
+  background: #ffffff;
+}
+.pc-tab ul li:not(:last-child) label {
+  border-right-width: 1;
+}
+.pc-tab section {
+  font-family: "Droid Serif";
+  clear: both;
+}
+.pc-tab section .square {
+  padding: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  background: #fff;
+  line-height: 1.5em;
+  letter-spacing: 0.3px;
+  color: #444;
+}
+.pc-tab section .square h2 {
+  margin: 0;
+  font-family: "Raleway";
+  letter-spacing: 1px;
+  color: #34495e;
+}
+
+#tab1:checked ~ nav .tab1 label,
+#tab2:checked ~ nav .tab2 label,
+#tab3:checked ~ nav .tab3 label,
+#tab4:checked ~ nav .tab4 label,
+#tab5:checked ~ nav .tab5 label {
+  background: white;
+  color: #111;
+  position: relative;
+}
+#person1:checked ~ nav .person1 label,
+#person2:checked ~ nav .person2 label {
+  background: white;
+  color: #111;
+  position: relative;
+}
+#mstwd1:checked ~ nav .mstwd1 label,
+#mstwd2:checked ~ nav .mstwd2 label{
+  background: white;
+  color: #111;
+  position: relative;
+}
+#city1:checked ~ nav .city1 label,
+#city2:checked ~ nav .city2 label{
+  background: white;
+  color: #111;
+  position: relative;
+}
+#wa7da1:checked ~ nav .wa7da1 label,
+#wa7da2:checked ~ nav .wa7da2 label{
+  background: white;
+  color: #111;
+  position: relative;
+}
+
+#tab1:checked ~ nav .tab1 label:after,
+#tab2:checked ~ nav .tab2 label:after,
+#tab3:checked ~ nav .tab3 label:after,
+#tab4:checked ~ nav .tab4 label:after,
+#tab5:checked ~ nav .tab5 label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ffffff;
+  left: 0;
+  bottom: -1px;
+}
+#person1:checked ~ nav .person1 label:after,
+#person2:checked ~ nav .person2 label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ffffff;
+  left: 0;
+  bottom: -1px;
+}
+#mstwd1:checked ~ nav .mstwd1 label:after,
+#mstwd2:checked ~ nav .mstwd2 label:after{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ffffff;
+  left: 0;
+  bottom: -1px;
+}
+#city1:checked ~ nav .city1 label:after,
+#city2:checked ~ nav .city2 label:after{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ffffff;
+  left: 0;
+  bottom: -1px;
+}
+#wa7da1:checked ~ nav .wa7da1 label:after,
+#wa7da2:checked ~ nav .wa7da2 label:after{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ffffff;
+  left: 0;
+  bottom: -1px;
+}
+
+.label label{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* .section-title:after{
+  content: "";
+  border-bottom: 1px solid #111;
+
+} */
+
+.section-title::after {
+  content: '';
+  width: 150px;
+  height: 1px;
+  background-color: #1d1b31;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.section-title::before {
+  content: '';
+  width: 70px;
+  height: 10px;
+  border-top: 1px solid #1d1b31;
+  border-bottom: 1px solid #1d1b31;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.section-title-role::after {
+  content: '';
+  width: 150px;
+  height: 1px;
+  background-color: #1d1b31;
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.section-title-role::before{
+  content: '';
+  width: 70px;
+  height: 10px;
+  border-top: 1px solid #1d1b31;
+  border-bottom: 1px solid #1d1b31;
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.section-title-free::after{
+  content: '';
+  width: 150px;
+  height: 1px;
+  background-color: #1d1b31;
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.section-title-free::before{
+  content: '';
+  width: 70px;
+  height: 10px;
+  border-top: 1px solid #1d1b31;
+  border-bottom: 1px solid #1d1b31;
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+
+
+
+
+
+
+

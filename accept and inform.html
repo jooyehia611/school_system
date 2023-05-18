@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Sidebar Menu  | CodingLab </title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body dir="rtl">
+
+
+
+
+<!-- navbar -->
+
+
+  <header class="position-relative">
+    <nav dir="rtl" class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #11101D;">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  
+            <li class="nav-item dropdown active">
+              <a class="text-white nav-link dropdown-toggle d-flex justify-content-center align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <h5>محمد الزبيدي</h5>
+                <div class="box">
+                  <img src="img/profile-img-1.jpg" alt="" class="ms-2 me-2" width="40px" style="border-radius: 50%;">
+                </div>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+  
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+<!-- end navbar -->
+
+
+
+
+<!-- sidebar -->
+
+
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">محمد الزبيدي</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+
+    <ul class="nav-list">
+      <!-- <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li> -->
+      <li>
+        <a href="#first">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">البطاقات</span>
+        </a>
+         <span class="tooltip">البطاقات</span>
+      </li>
+      <li>
+       <a href="#second">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">عائلة</span>
+       </a>
+       <span class="tooltip">عائلة/span>
+     </li>
+     <li>
+       <a href="#third">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">طالب</span>
+       </a>
+       <span class="tooltip">طالب</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">انسحاب</span>
+       </a>
+       <span class="tooltip">انسحاب</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">تجديد </span>
+       </a>
+       <span class="tooltip"> تجديد </span>
+     </li>
+
+     <!-- <li class="profile">
+         <div class="profile-details">
+           <img src="profile.jpg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Prem Shahi</div>
+             <div class="job">Web designer</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li> -->
+    </ul>
+  </div>
+
+
+<!-- end sidebar -->
+
+
+
+
+
+  <section class="home-section" id= 'second'>
+   <div class="container">
+    <div class="pc-tab" dir="rtl" style="height: 500px;">
+      <input checked="checked" id="tab1" type="radio" name="pct" />
+      <input id="tab2" type="radio" name="pct" />
+        <nav>
+          <ul dir="rtl">
+            <li class="tab1">
+              <label for="tab1" class=" fw-bold">معلومات عامة </label>
+            </li>
+            <li class="tab2">
+              <label for="tab2" class="fw-bold">الأب</label>
+            </li>
+            <li class="tab3">
+              <label for="tab3" class="fw-bold">الأم</label>
+            </li>
+            <li class="tab4">
+              <label for="tab4" class="fw-bold">ولي الأمر </label>
+            </li>
+            <li class="tab5">
+              <label for="tab5" class="fw-bold">الأبناء</label>
+            </li>
+            <li class="tab6">
+              <label for="tab6" class="fw-bold">الخصومات</label>
+            </li>
+            <li class="tab7">
+              <label for="tab7" class="fw-bold">الاشتراكات</label>
+            </li>
+            <li class="tab8">
+              <label for="tab8" class="fw-bold">المواصلات</label>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- tab content -->
+        <section class="label">
+
+          <div class="tab1 square">
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="d-flex flex-column">
+                  <div class="d-flex align-items-center mb-2 ">
+                    <label class="w-25" for="" >السنة الدراسية :</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <label class="w-25 " for=""> التسلسل :</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <label class="w-25 " for=""> رقم عقد التسجيل :</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex flex-column">
+                  <div class="d-flex align-items-center mb-2 ">
+                    <label class="w-25" for="" > الأب :</label>
+                    <input type="text" class="form-control ">
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <label class="w-25" for=""> الأم :</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <label class="w-25" for="">  ولي الأمر  :</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+            
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex flex-column">
+                  <div class="d-flex align-items-center mb-2 ">
+                    <label class="w-25" for="" > هاتف :</label>
+                    <input type="text" class="form-control ">
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <label class="w-25 " for=""> هاتف :</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <label class="w-25" for="">  هاتف   :</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+            
+              </div>
+
+
+
+            </div>
+
+            <div class="row mt-3">
+              <h5 class="fw-bold"> معلومات مالية :
+                <div class="border-4 border-bottom w-25 pt-2"></div>
+              </h6>
+              <div class="col-md-4">
+
+                <div class="d-flex flex-column">
+                  <div class="d-flex align-items-center mb-2 ">
+                    <label class="w-25" for="" > أقساط :</label>
+                    <input type="text" class="form-control ">
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <label class="w-25 " for=""> اشتراكات :</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <label class="w-25 " for="">  مواصلات :</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+              </div>
+              
+              <div class="col-md-4">
+
+                <div class="d-flex flex-column">
+                  <div class="d-flex align-items-center mb-2 ">
+                    <label class="w-25" for="" >عقوبات و غرامات :</label>
+                    <input type="text" class="form-control ">
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <label class="w-25 " for="">رصيد سنوات سابقة :</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <label class="w-25 " for="">  فواتير مشتريات :</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col-md-4">
+
+                <div class="d-flex flex-column">
+                  <div class="d-flex align-items-center mb-2 ">
+                    <label class="w-25" for="" > خصومات عامة :</label>
+                    <input type="text" class="form-control ">
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <label class="w-25 " for=""> خصومات اخوة :</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <label class="w-25 " for="">  فواتير مشتريات :</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="row d-flex mt-3">
+            <div class="col-md-4">
+              <div class="d-flex align-items-center mb-2 ">
+                <label class="w-25" for="" > المجموع :</label>
+                <input type="text" class="form-control ">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex align-items-center mb-2 ">
+                <label class="w-25" for="" > المدفوع :</label>
+                <input type="text" class="form-control ">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex align-items-center mb-2 ">
+                <label class="w-25" for="" > المتبقي :</label>
+                <input type="text" class="form-control ">
+              </div>
+            </div>
+
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-md-3">
+                <button class="btn btn-dark text-white fs-5 w-100" name="create">إنشاء العقد</button>
+              </div>
+              <div class="col-md-3">
+                <button class="btn btn-dark text-white fs-5 w-100" name="create">كشف حساب</button>
+              </div>
+              <div class="col-md-3">
+                <button class="btn btn-dark text-white fs-5 w-100" name="create">عائلة جديدة</button>
+              </div>
+              <div class="col-md-3">
+                <button class="btn btn-dark text-white fs-5 w-100" name="create">عقد التسجيل</button>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-md-3">
+                <button class="btn btn-dark text-white fs-5 w-100" name="create">تعديل عائلة</button>
+              </div>
+              <div class="col-md-3">
+                <button class="btn btn-dark text-white fs-5 w-100" name="create">تفريغ الحقول</button>
+              </div>
+              <div class="col-md-3">
+                <button class="btn btn-dark text-white fs-5 w-100" name="create">طباعة المعلومات</button>
+              </div>
+              <div class="col-md-3">
+                <button class="btn btn-dark text-white fs-5 w-100" name="create">خروج</button>
+              </div>
+            </div>
+
+
+
+          </div>
+
+          <div class="tab2 square">
+            <h2>Second</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nesciunt ipsum dolore error repellendus officiis aliquid a, vitae reprehenderit, accusantium vero, ad. Obcaecati numquam sapiente cupiditate. Praesentium eaque, quae error!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, maiores.</p>
+          </div>
+
+          <div class="tab3 square">
+            <h2>Third</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, nobis culpa rem, vitae earum aliquid.</p>
+          </div>
+
+          <div class="tab4 square">
+            <h2>fourth</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, nobis culpa rem, vitae earum aliquid.</p>
+          </div>
+
+          <div class="tab5 square">
+            <h2>fifth</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, nobis culpa rem, vitae earum aliquid.</p>
+          </div>
+
+        </section>
+      </div>
+   </div>
+    
+
+
+
+
+
+  </section>
+       
+  <section class="home-section" id= 'second'>
+         <h1>Second</h1>
+  </section>
+       
+  <section class="home-section" id= 'third'>
+        <h1>Third</h1>
+  </section>
+       
+  <section class="home-section" id= 'fourth'>
+        <h1>Fourth</h1>
+  </section>
+
+
+  <script src="js/all.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
